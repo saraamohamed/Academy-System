@@ -1,0 +1,93 @@
+﻿- Page Number 1 (Login Page):
+	
+	/academy-api/login
+
+
+- Page Number 2 (Groups Page):
+
+	/academy-api/group/all
+	/academy-api/group/{groupId}
+	/academy-api/group/insert
+	/academy-api/group/update
+	/academy-api/group/delete/{groupId}
+
+
+- Page Number 3 (User Page):
+
+	/academy-api/user/all
+	/academy-api/user/{userId}
+	/academy-api/user/insert
+	/academy-api/user/update
+	/academy-api/user/deactivate/{userId}
+	/academy-api/user/delete/{userId}
+	/academy-api/group/all
+	/academy-api/branch/all
+	/academy-api/language/all
+
+
+- Page Number 4 (Branch Page):
+
+	/academy-api/branch/all
+	/academy-api/branch/{branchId}
+	/academy-api/branch/insert
+	/academy-api/branch/update
+	/academy-api/branch/delete/{branchId}
+	/academy-api/user/all-users-full-names
+
+
+- Page Number 5 (Course Page):
+
+	/academy-api/course/all
+	/academy-api/course/{courseId}
+	/academy-api/course/insert
+	/academy-api/course/update
+	/academy-api/course/delete/{courseId}
+
+
+- Page Number 6 (Subject Page):
+
+	/academy-api/subject/all/{courseId}
+	/academy-api/subject/{subjectId}
+	/academy-api/subject/insert
+	/academy-api/subject/update
+	/academy-api/subject/delete/{subjectId}
+
+
+- Page Number 7 (Trainee Page):
+
+	/academy-api/trainee/all
+	/academy-api/trainee/{traineeId}
+	/academy-api/trainee/insert
+	/academy-api/trainee/update
+	/academy-api/trainee/deactivate/{traineeId}
+	/academy-api/trainee/delete/{traineeId}
+	/academy-api/trainee/religion-combobox-values
+	/academy-api/trainee/gender-combobox-values
+	/academy-api/trainee/military-status-combobox-values
+	/academy-api/trainee/years-from-1980-till-now
+
+
+- Page Number 8 (Adding Course To A Trainee):
+	
+	/academy-api/branch/all
+	/academy-api/trainee/all-by-branch-id/{branchId}
+	/academy-api/course/all
+	/academy-api/trainee/{traineeId}
+	/academy-api/trainee-course-relation/all/{traineeId}
+	/academy-api/trainee-course-relation/insert
+	/academy-api/trainee-course-relation/insert
+
+
+- Page Number 9 ()
+	
+	/academy-api/branch/all
+	/academy-api/trainee/all-by-branch-id/{branchId}
+	/academy-api/course/all-trainee-courses/{traineeId}
+	/academy-api/trainee/{traineeId}
+	/academy-api/transaction/courses-accounts-statements/{traineeId}
+	/academy-api/transaction/all/{traineeId}
+	/academy-api/transaction/insert
+	/academy-api/transaction/delete/{transactionId}
+
+
+-EndOfFile-
