@@ -24,7 +24,8 @@ namespace AcademyWebAppAPI.DataTransferObjectsManagers.TraineeCourseRelationDtos
                     course.CourseDescription,
                     course.RegistrationDate,
                     course.CourseDurationInHours,
-                    course.CourseCost
+                    course.CourseCost,
+                    course.CourseId
                     ));
             });
 

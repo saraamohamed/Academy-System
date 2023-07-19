@@ -1,8 +1,6 @@
-import { LowerCasePipe } from '@angular/common';
-import { Component,DoCheck,OnInit } from '@angular/core';
+import { Component,DoCheck } from '@angular/core';
 import { Router } from '@angular/router';
 import jwt_decode from 'jwt-decode';
-import { toArray } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -43,6 +41,8 @@ export class SidebarComponent implements DoCheck {
   console.log(this.GroupsPagePower);
 
   
+}else{
+  this.navhidden=false;
 }
 
  }

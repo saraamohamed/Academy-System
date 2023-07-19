@@ -23,6 +23,7 @@ namespace AcademyWebAppAPI.Repositories.TraineeCourseRelation
                       course => course.CourseId,
                       (relation, course) => new
                       {
+                          relation.CourseId,
                           course.CourseName,
                           course.CourseDescription,
                           relation.RegistrationDate,

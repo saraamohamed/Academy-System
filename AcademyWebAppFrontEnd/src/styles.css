@@ -1,7 +1,12 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
 body{
     direction: rtl;   
 }
 
 *{
     box-sizing: border-box;    
+}
+
+*{
+    font-family: 'Amiri', serif;
 }

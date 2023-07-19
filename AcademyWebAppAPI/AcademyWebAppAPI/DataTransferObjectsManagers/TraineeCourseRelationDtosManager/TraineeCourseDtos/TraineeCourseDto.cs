@@ -6,5 +6,6 @@
         string CourseDescription,
         DateTime? RegistrationDate,
         int CourseDurationInHours,
-        decimal CourseCost);
+        decimal CourseCost,
+        int CourseId=0);
 }

@@ -12,8 +12,8 @@ import { HttpResponse } from '@angular/common/http';
 })
 export class LoginComponent {
 
-token:any
-  
+token:any;
+errorMessage:any;
   loginForm =new FormGroup({
     username: new FormControl('',[Validators.required]),
     password: new FormControl('',[Validators.required]),
@@ -48,31 +48,12 @@ constructor(private router: Router,
 
       },
       error: (error) => {
-        this.router.navigate(['/login']);
+        //this.router.navigate(['/login']);
+        this.errorMessage = "اسم المستخدم او كلمة المرور غير صحيح.";
         console.log(error);
       }
     });
-      // next: (response: HttpResponse<any>) => {
-      //   const statusCode = this.loginService.getStatus(response);
-      //   if (statusCode === 200) { // Check the status code
-      //     this.token = response.body.generatedJwtToken; // Extract the JWT token from the response body
-      //     const tokenData = jwt_decode(this.token);
-      //     console.log("Logged in successfully");
-      //     localStorage.setItem("token", this.token); 
-      //     console.log(tokenData);
-          
-      //     // Save the token to local storage
-      //     this.router.navigate(['/groups']);
-      //   } else {
-      //     console.log("Login failed with status code: " + statusCode);
-      //     this.router.navigate(['/login']);
-      //   }
-      // },
-      // error: (error: any) => {
-      //   console.error(error);
-      //   this.router.navigate(['/login']);
-      // }
-    // });
+
     
    
   }

@@ -18,6 +18,8 @@ export class SubjectsComponent implements  OnInit {
   courceId:any
   courseId:any
   subjectId:any
+  showTable = false;
+  
 
 
   // courseId:any
@@ -27,7 +29,7 @@ export class SubjectsComponent implements  OnInit {
     ){}
 
     subjectForm =new FormGroup({
-    subjectName: new FormControl('',[Validators.required,Validators.minLength(3),Validators.pattern('^[a-zA-Z\u0600-\u06FF]+$')]),
+    subjectName: new FormControl('',[Validators.required,Validators.minLength(1)]),
     subjectCourse: new FormControl('',[Validators.required]),
   })
 
@@ -57,6 +59,7 @@ loadSubjects() {
      console.log(error);
    }
  });
+ this.showTable =true;
 }
 
     ngOnInit(): void {
@@ -71,8 +74,6 @@ loadSubjects() {
       }
     });
 
-// this.loadSubjects()
-console.log("on it fn");
 
 
 }
@@ -124,12 +125,14 @@ DeleteSubject(id:number){
     this.subjectService.addSubject(subject).subscribe(()=>{
       console.log("added");
       this.loadSubjects();
-      this.subjectForm.reset();
+      // this.subjectForm.reset();
+      this.getSubjectName.reset();
 
     })
   }
   back(){
     this.subjectForm.reset();
+    this.showTable =false;
   }
 
 }
